@@ -20,7 +20,7 @@ public class FBGraph {
     public String getFBGraph() {
         String graph;
         try {
-            String g = "https://graph.facebook.com/me?fields=name,first_name,email,gender,age_range,picture,location&" + accessToken;
+            String g = "https://graph.facebook.com/v2.7/me?fields=name,first_name,email,gender,age_range,picture,location&" + accessToken;
             URL u = new URL(g);
             URLConnection c = u.openConnection();
             BufferedReader in = new BufferedReader(new InputStreamReader(c.getInputStream()));
